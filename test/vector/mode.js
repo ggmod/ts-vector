@@ -1,4 +1,4 @@
-import { Vector } from '../../src/main';
+import { Vector } from '../../src/index';
 
 
 const mode = array => Vector.from(array).mode();

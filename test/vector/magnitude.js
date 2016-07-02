@@ -1,4 +1,4 @@
-import { Vector } from '../../src/main';
+import { Vector } from '../../src/index';
 
 
 const magnitude = array => Vector.from(array).magnitude();

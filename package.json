@@ -1,8 +1,32 @@
 {
   "name": "ts-vector",
   "version": "0.1.0",
-  "main": "dist/main.js",
+  "description": "Vector number array with common math functions in JavaScript/TypeScript",
+  "keywords": [
+    "vector",
+    "math",
+    "statistics",
+    "array inheritance"
+  ],
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "author": "ggmod",
+  "license": "MIT",
   "scripts": {
-    "test": "bash test.sh"
+    "prepublish": "gulp bundle && rm -rf dist/* && tsc",
+    "test": "rm -rf build-test; cd test; tsc; cd ..; jasmine-node --matchall ./build-test/test/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ggmod/ts-vector.git"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "del": "^2.2.1",
+    "exorcist": "^0.4.0",
+    "gulp": "^3.9.1",
+    "tsify": "^0.16.0",
+    "typescript": "^1.8.10",
+    "vinyl-source-stream": "^1.1.0"
   }
 }

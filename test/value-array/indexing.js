@@ -1,4 +1,4 @@
-import { ValueArray } from '../../src/main';
+import { ValueArray } from '../../src/index';
 
 let v = array => ValueArray.from(array);
 

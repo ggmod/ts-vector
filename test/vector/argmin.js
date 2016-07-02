@@ -1,4 +1,4 @@
-import { Vector } from '../../src/main';
+import { Vector } from '../../src/index';
 
 
 const argmin = array => Vector.from(array).argmin();

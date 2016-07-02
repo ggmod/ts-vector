@@ -1,4 +1,4 @@
-import { Vector } from '../../src/main';
+import { Vector } from '../../src/index';
 
 
 const cumsum = v => Vector.from(v).cumsum();

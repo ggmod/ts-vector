@@ -1,4 +1,4 @@
-import { Vector } from '../../src/main';
+import { Vector } from '../../src/index';
 
 
 const quantiles = (v, q) => Vector.from(v).quantiles(q);

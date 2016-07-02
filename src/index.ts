@@ -4,3 +4,6 @@ export { NumberArrayStats } from './vector/stats';
 
 export {default as Vector} from './vector';
 export {default as ValueArray} from './value-array';
+
+import Vector from './vector';
+export default Vector;

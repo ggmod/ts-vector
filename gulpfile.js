@@ -1,34 +1,35 @@
-var gulp = require('gulp');
-var rename = require('gulp-rename');
-var source = require('vinyl-source-stream');
-var del = require('del');
-var exorcist = require('exorcist');
-var browserify = require('browserify');
-var tsify = require('tsify');
-var uglifyJs = require('gulp-uglify');
-var typescript = require('typescript');
+const gulp = require('gulp');
+const source = require('vinyl-source-stream');
+const del = require('del');
+const exorcist = require('exorcist');
+const browserify = require('browserify');
+const tsify = require('tsify');
+const typescript = require('typescript');
 
+const VERSION = require('./package.json').version;
 
-gulp.task('clean', function() {
-    return del(['build/*']); // if I remove the whole folder, exorcist fails silently.
+// This is for creating the browser bundle only
+
+gulp.task('clean', () => {
+    return del(['build/*']);
 });
 
-gulp.task('compile', ['clean'], function() {
+gulp.task('bundle', ['clean'], () => {
     return browserify({
             debug: true,
-            standalone: 'dt'
+            standalone: 'Vector'
         })
-        .add('src/main.ts') // you can only have one entry file ('tsd.d.ts' moved to main.ts)
-        .plugin(tsify) // TODO add { typescript: typescript }, but it doesn't work with 1.8.3 yet
+        .add('src/bundle.ts')
+        .plugin(tsify, { typescript: typescript })
         .bundle()
-        .on('error', function (error) { console.error(error.toString()); })
-        .pipe(exorcist('build/data-bundle.js.map'))
-        .pipe(source('data-bundle.js'))
+        .on('error', error => { console.error(error.toString()); })
+        .pipe(exorcist('build/ts-vector-' + VERSION + '.js.map'))
+        .pipe(source('ts-vector-' + VERSION + '.js'))
         .pipe(gulp.dest('build'));
 });
 
-gulp.task('watch', function() {
-    gulp.watch('src/**/*.ts', ['compile']);
+gulp.task('watch', () => {
+    gulp.watch('src/**/*.ts', ['bundle']);
 });
 
-gulp.task('default', ['compile']);
+gulp.task('default', ['bundle']);

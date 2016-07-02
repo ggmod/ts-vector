@@ -1,4 +1,4 @@
-import { Vector } from '../../src/main';
+import { Vector } from '../../src/index';
 
 
 const lessThan = (v1, v2) => Vector.from(v1).lessThan(v2);

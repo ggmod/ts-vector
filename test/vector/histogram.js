@@ -1,4 +1,4 @@
-import { Vector } from '../../src/main';
+import { Vector } from '../../src/index';
 
 
 const histogram = (v, options) => Vector.from(v).histogram(options);

@@ -1,4 +1,4 @@
-import { Vector } from '../../src/main';
+import { Vector } from '../../src/index';
 
 
 const add = (v1, v2) => Vector.from(v1).add(v2);
