@@ -1,3 +1,4 @@
+import ValueArray from './value-array';
 import { min, max, extent, mean, variance, std, mad, argmin, argmax, mode } from './vector/statistics';
 import { sum, sumOfSquares, magnitude, product } from './vector/math';
 import {
@@ -16,7 +17,7 @@ import { stats, NumberArrayStats } from './vector/stats';
 import { range, linspace, logspace } from './vector/range';
 
 
-export default class Vector extends Array<number> {
+export default class Vector extends ValueArray<number> {
 
     // Statistics:
 
