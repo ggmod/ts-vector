@@ -34,5 +34,6 @@ describe('Counts', () => {
         expect(v([3, 3, 3, 3, 3]).unique()).toEqual([3]);
         expect(v([1, 3, 6, 6, 6, 6, 7, 7, 12, 12, 17]).unique()).toEqual([1, 3, 6, 7, 12, 17]);
         expect(v([17, 12, 12, 7, 7, 6, 6, 6, 6, 3, 1]).unique()).toEqual([17, 12, 7, 6, 3, 1]);
+        expect(v([2, 2, 1, 0, 1, 0, 0, 1, 2]).unique()).toEqual([2, 1, 0]);
     });
 });

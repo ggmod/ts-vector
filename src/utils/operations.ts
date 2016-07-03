@@ -13,5 +13,5 @@ export const  lessThan = (x: number, y: number) => x < y ? 1 : 0;
 export const  moreOrEqualThan = (x: number, y: number) => x >= y ? 1 : 0;
 export const  lessOrEqualThan = (x: number, y: number) => x <= y ? 1 : 0;
 
-export const  equal = (x: number, y: number) => x == y ? 1 : 0;
-export const  notEqual = (x: number, y: number) => x != y ? 1 : 0;
+export const  equal = (x: number, y: number) => x === y ? 1 : 0;
+export const  notEqual = (x: number, y: number) => x !== y ? 1 : 0;

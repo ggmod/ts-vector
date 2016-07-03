@@ -17,7 +17,7 @@ export default class ValueArray<T> extends Array<T> {
 
     shuffle(): this { return <this>shuffle(this); }
 
-    transform(callback: (item: T, index: number, array: this) => void): this { return <this>transform(this, callback) };
+    transform(callback: (item: T, index: number, array: this) => T): this { return <this>transform(this, callback) };
     each(callback: (item: T, index: number, array: this) => void): this { return <this>each(this, callback); }
     fillBy(fn: (index: number, array: this) => T): this { return <this>fillBy(this, fn); }
 

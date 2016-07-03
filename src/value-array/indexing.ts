@@ -24,7 +24,11 @@ export function permute(v: ArrayLike<any>, indexes: ArrayLike<number>): ArrayLik
     let result: ArrayLike<any> = (<any>v.constructor).from({ length: indexes.length });
 
     for (let i = 0; i < indexes.length; i++) {
-        result[i] = v[indexes[i]];
+        if (indexes[i] >= 0) {
+            result[i] = v[indexes[i]];
+        } else {
+            result[i] = v[v.length + indexes[i]];
+        }
     }
     return result;
 }

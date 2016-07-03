@@ -25,7 +25,7 @@ export function shuffle(v: ArrayLike<any>): ArrayLike<any> {
     return v;
 }
 
-export function transform<T>(v: ArrayLike<T>, callback: (item: T, index: number, array: ArrayLike<T>) => void): ArrayLike<T> {
+export function transform<T>(v: ArrayLike<T>, callback: (item: T, index: number, array: ArrayLike<T>) => T): ArrayLike<T> {
     for (let i = 0; i < v.length; i++) {
         v[i] = callback.call(null, v[i], i, v);
     }

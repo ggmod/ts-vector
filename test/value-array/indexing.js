@@ -33,6 +33,7 @@ describe('Indexing', () => {
         expect(v([3, 1, 2, 7, 10]).permute([2, 0, 4, 1, 3])).toEqual([2, 3, 10, 1, 7]);
         expect(v([3, 1, 2, 7, 10]).permute([2, 3, 2, 3, 2])).toEqual([2, 7, 2, 7, 2]);
         expect(v([3, 1, 2, 7, 10]).permute([3])).toEqual([7]);
+        expect(v([3, 1, 2, 7, 10]).permute([0, 2,-1])).toEqual([3, 2, 10]);
     });
 
     it('range', () => {
