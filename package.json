@@ -1,7 +1,7 @@
 {
   "name": "ts-vector",
   "version": "0.1.0",
-  "description": "Vector number array with common math functions in JavaScript/TypeScript",
+  "description": "A vector and numeric array implementation with common math and statistical functions for JavaScript and TypeScript",
   "keywords": [
     "vector",
     "math",

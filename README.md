@@ -1,9 +1,9 @@
 ts-vector
 =========
 
-<b>ts-vector</b> provides a Vector class that extends the JavaScript/TypeScript array with the most commonly used mathematical and statistical functions.
+**ts-vector** provides a Vector class that extends the JavaScript/TypeScript array with the most commonly used mathematical and statistical functions.
 
-<b>This library uses EcmaScript 6 array inheritance, so it's not going to work in old browsers!</b><br/>
+**This library uses EcmaScript 6 array inheritance, so it's not going to work in old browsers!**<br/>
 Node.js 5.0 and the latest Chrome already support most of the Array inheritance features. 
 
 Install it from NPM: 
