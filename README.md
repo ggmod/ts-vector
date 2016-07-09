@@ -3,13 +3,15 @@ ts-vector
 
 <b>ts-vector</b> provides a Vector class that extends the JavaScript/TypeScript array with the most commonly used mathematical and statistical functions.
 
-<b>This library uses EcmaScript 6 array inheritance, so it's not going to work in old browsers!</b>
+<b>This library uses EcmaScript 6 array inheritance, so it's not going to work in old browsers!</b><br/>
 Node.js 5.0 and the latest Chrome already support most of the Array inheritance features. 
 
 Install it from NPM: 
-`npm install ts-vector --save`
-Or use a bundled .js file: 
- [ts-vector.js](https://github.com/ggmod/ts-vector/releases/download/v0.1.0/ts-vector-0.1.0.js)
+`npm install ts-vector`
+, or use a bundled .js file: 
+ [ts-vector.js](https://github.com/ggmod/ts-vector/releases/download/0.1.0/ts-vector-0.1.0.js)
+
+Check the [API Reference](https://github.com/ggmod/ts-vector/wiki/API-reference) 
 
 ### Examples
 
